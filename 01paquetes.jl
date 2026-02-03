@@ -5,7 +5,7 @@
 using Pkg # cargando el instalador de paquetes de Julia
 
 begin
-    paquete = ["QuadGK", "HCubature", "Optim",
+    paquete = ["QuadGK", "HCubature", "Optim",#integrr fn de una variable{el primero}
                "SpecialFunctions", "LaTeXStrings", 
                "Distributions", "StatsBase",
                "Plots", "StatsPlots", "CSV", "DataFrames"
