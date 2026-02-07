@@ -166,7 +166,7 @@ function densprob(muestra::Vector{<:Real}, nclases::Integer = 0)
             i = count(x .≥ clases) # determinar clase a la que pertenece x
             if i ∈ [m, m+1] # último intervalo es de la forma [a,b]
                 a = clases[m]
-                b = clases[m+1]
+                b = clases[m+1]#Por si el usuario requiere ver qué pasa en el ultimo intervalo, se forza a que caiga en ese último intervalo
                 conteo = count(a .≤ muestra .≤ b)
             else # los demás intervalos son de la forma [a,b)
                 a = clases[i]
