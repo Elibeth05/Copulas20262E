@@ -31,7 +31,7 @@ function simDiscreta(fmp::Function, m::Integer)
     function simuno(u)
         k = 1
         a = fmp(1)
-        while u > a
+        while u > a  #va evaluando la probabilidad de que cierto valor sea menor que la proba que requerimos , esto lo hace para un solo valor
             k += 1
             a += fmp(k)
         end
