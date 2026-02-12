@@ -18,7 +18,8 @@ f(1), f(2), f(3)
 sum(f.(collect(1:1_000_000))) # suma parcial cercana a 1 por la izquierda
 m = 1_000_000; # tamaño de muestra a simular
 s = simDiscreta(f, m) # vector de simulaciones
-prop(k) = count(s .== k) / m # probabilidad empírica
+prop(k) = count(s .== k) / m # probabilidad empírica #SE DEFINE ESTA FUNCION QUE CUENTA EN ELVECTOR SIMULADOCUANTAS SON IGUALES A ESE VALOR K, AL DIVIFIRLO ENTRE M TOMA LA PROBA 
+EMPIRICA DE QUE TOME ESE VALOR, YY ESO,MISNTRAS M CREZCA SE VA A PARECER A LA TEORICA, DE LA CUAL Y AEVALUAMOS, EN LINEAS  DE CÓDIGO ARRIBA
 # Algunas probabilidades teóricas versus empíricas:
 f(1), prop(1)
 f(2), prop(2)
