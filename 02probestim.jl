@@ -4,7 +4,7 @@
 
 ### Funciones:  distprob  masaprob  densprob
 #? y enter para ayuda
-
+### Estimaciones empíricas a partir de la fn de distribución, masaprob, densprob
 """
     distprob(muestra::Vector{<:Real})
 
