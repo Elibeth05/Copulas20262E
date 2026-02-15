@@ -14,9 +14,9 @@ end
 
 X = Gamma(2,3)
 
-α, θ = params(X)
+α, θ = params(X)#Para escribir esto ponemos /alpha+tecla de tabulador, /theta +teccla de tabulador
 
-mean(X), α*θ # media teórica
+mean(X), α*θ # media teórica, hay que cuidar qué parametrización tiene el paquete que estamos usando
 var(X), α*(θ^2) # varianza teórica
 extrema(X) # soporte
 
