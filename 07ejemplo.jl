@@ -2,7 +2,7 @@
 ### Autor: Dr. Arturo Erdely
 ### Versión: 2024-08-11
 
-
+#creo esto es un metodo de momentos vs un método de maxima verosimilitud     
 # Cargar paquetes y código externo necesarios:
 begin
     using Distributions # previamente instalado
@@ -33,3 +33,5 @@ mlogV(θ) = -sum(log.(pdf(Binomial(θ[1], θ[2]), muestra))) # menos log-verosim
 mlogV([m, p])
 mlogV([15, 0.6])
 emv = EDA(mlogV, [10, 0.15], [20, 0.6], iEnteros = [1])
+#ojo como con base en los valores obtenidos anteriormente hacemos un intervalo para esa 
+#línea de código
