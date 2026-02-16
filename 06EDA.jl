@@ -12,8 +12,8 @@ LA SIGUIENTE ES UNA FUNCION QU EMINIMIZA
 `fobj` A real function of several variables to be minimized, where its argument is a vector or 1-D array.
 
 `valmin, valmax` vectors or 1-D arrays of minimum and maximum values for the first generation.
-
-`iEnteros` index of variables that must take integer values.
+DE AUI PARA ADELANTE SON PARÁMETROS OPCIONALES, PORQUE 
+`iEnteros` index of variables that must take integer values., ESPECIFICAS, CUALES VAN A SER ENTEROS, SI NO le pasas el vector, asume que todos  van a ser números de punto flotante
 
 `tamgen` size of each generation.
 
@@ -26,13 +26,18 @@ LA SIGUIENTE ES UNA FUNCION QU EMINIMIZA
 # Example 1
 ```
 f(x) = (x[1] - 5)^4 - 16(x[1] - 5)^2 + 5(x[1] - 5) + 120
-EDA(f, [0], [9])
+//los corchetes [] al lado de una variable indican que estás accediendo a un índice o elemento específico dentro de una estructura de datos,
+//como un vector, una lista o un arreglo.
+EDA(f, [0], [9])//que funcion y que intervalos son el mínimo y el máximo 
 ```
 
 # Example 2
 This non-negative function is clearly minimized at (5,-2).
 ```
+//función de dos variables
 f(z) = abs(z[1] - 5) + abs(z[2] + 2)
+//el punto en el que se minimiza la fn no es deribable, ni continua
+//pero ni continua necesito que sea
 EDA(f, [-10, -10], [10, 10])
 ```
 
