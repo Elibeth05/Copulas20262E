@@ -3,6 +3,10 @@
 # Last update: 2026-01-01
 
 """
+LA SIGUIENTE ES UNA FUNCION QU EMINIMIZA
+* SI QUIERES maximizar, 
+    Ssolo lo multiplicas por -1
+* Si quieres que LA FUNCIÓN ALCANCE cierto valor- SE LO RESTAS ESE VALOR, LO PONES ELEVADO AL CUADRADO, LO MINIMIZAS Y ES LO MISMO
     EDA(fobj, valmin, valmax; iEnteros = zeros(Int, 0), tamgen = 1000, propselec = 0.3, difmax = 0.00001, maxiter = 1000)
 
 `fobj` A real function of several variables to be minimized, where its argument is a vector or 1-D array.
