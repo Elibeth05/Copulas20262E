@@ -38,10 +38,10 @@ end
 # Simula a priori
 begin
     nsim = 1_000_000
-    p = priori(mm, 3*mm, nsim)
+    p = priori(mm, 3*mm, nsim)#va a crear una a priori entre el maximo y 3 veces el maximo, llamando las nsimulaciones hechas
     δ = zeros(nsim)
-    muestraord = sort(muestra)
-    for i ∈ 1:nsim
+    muestraord = sort(muestra)#ordenamos
+    for i ∈ 1:nsim#a cada muestra simulada anterriormente le simulas una binomial
         muestraABC = rand(Binomial(p.r[i], p.θ[i]), n)
         δ[i] = sum(abs.(sort(muestraABC) - muestraord))
     end
@@ -50,7 +50,7 @@ end
 
 # Método ABC
 begin
-    nselec = 300
+    nselec = 300#seleccionamos a las 300 observaciones que reportan los valores +parecidos
     iselec = sortperm(δ)[1:nselec]
     post = (r = p.r[iselec], θ = p.θ[iselec])
     scatter(post.r, post.θ, label = "simulaciones a posteriori")
@@ -59,7 +59,7 @@ begin
 end
 
 
-# Inferencias marginales a posteriori
+# Inferencias marginales a posteriori, grafica conjunta de esos 300 pares tan parecido
 begin
     rpost = masaprob(post.r)
     plot(rpost.valores, rpost.probs, color = :gray, label = "")
