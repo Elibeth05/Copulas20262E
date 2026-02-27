@@ -12,7 +12,7 @@ begin
   using Random # herramientas para generar observaciones pseudo-aleatorias
 end
 
-
+f
 #= Paquetes que requieren haber sido instalados previamente
    de la siguiente forma, en la terminal de Julia:
 
